@@ -16,7 +16,11 @@ b. <YOUR ANSWER HERE>
 
 c. <YOUR ANSWER HERE>
 
-Extra Credit (Optional!):
+Open-ended portion:
+
+<Please write instructions here for us to experience your unique creation!>
+
+Extra Credit:
 
 1. <YOUR ANSWER HERE>
 
