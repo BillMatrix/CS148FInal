@@ -1,5 +1,3 @@
-// CS148 Summer 2016 Homework 3 - Shaders
-
 #version 330 core
 out vec4 color;
 
