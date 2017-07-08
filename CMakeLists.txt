@@ -37,6 +37,9 @@ if(WIN32)
 
 else()
     SET(CMAKE_CXX_FLAGS "-g -O0 -Wall -Wextra -Werror -Wfloat-equal -Wno-unused-parameter -Wno-unknown-pragmas -Wno-deprecated-declarations -Wno-pessimizing-move")
+    if(UNIX)
+        add_definitions(-DGLEW_EGL)
+    endif()
 endif()
 
 #
