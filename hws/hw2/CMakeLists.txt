@@ -1,6 +1,8 @@
 cmake_minimum_required(VERSION 3.2)
 
-if(UNIX)
+if(APPLE)
+    SET(project_LIBS libglew_static glfw ${GLFW_LIBRARIES})
+elseif(UNIX)
     SET(project_LIBS libglew_static glfw ${GLFW_LIBRARIES} GLESv2 EGL)
 else()
     SET(project_LIBS libglew_static glfw ${GLFW_LIBRARIES})
