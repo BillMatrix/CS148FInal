@@ -22,3 +22,6 @@ x64
 /hws/hw2_opengl_bootcamp/CMakeFiles
 /hws/hw2_opengl_bootcamp/cmake_install.cmake
 /lib/libhw2.a
+CMakeFiles
+cmake_install.cmake
+/hws/hw3/.DS_Store
