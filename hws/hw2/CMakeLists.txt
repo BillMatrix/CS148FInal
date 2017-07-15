@@ -1,6 +1,12 @@
-cmake_minimum_required(VERSION 3.8)
+cmake_minimum_required(VERSION 3.2)
 
-SET(project_LIBS libglew_static glfw ${GLFW_LIBRARIES})
+if(APPLE)
+    SET(project_LIBS libglew_static glfw ${GLFW_LIBRARIES})
+elseif(UNIX)
+    SET(project_LIBS libglew_static glfw ${GLFW_LIBRARIES} GLESv2 EGL)
+else()
+    SET(project_LIBS libglew_static glfw ${GLFW_LIBRARIES})
+endif()
 
 SET(project_BIN ${PROJECT_NAME})
 SET(project_LIB ${PROJECT_NAME}_lib CACHE INTERNAL "Project Library")
