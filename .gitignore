@@ -25,3 +25,6 @@ x64
 CMakeFiles
 cmake_install.cmake
 /hws/hw3/.DS_Store
+/hws/hw3/Makefile
+/lib/lib“hw3”.a
+/hws/hw2/Makefile
