@@ -70,8 +70,13 @@ void computeLaplacianSmoothedMesh(unsigned int numIterations)
     if (g_bunny_1) delete g_bunny_1;
     if (g_bunny_2) delete g_bunny_2;
 
+#ifdef WIN32
+	g_bunny_1 = new Mesh("../bunny.obj", g_world->m_shader, glm::vec3(0));
+	g_bunny_2 = new Mesh("../bunny.obj", g_world->m_shader, glm::vec3(0));
+#else
     g_bunny_1 = new Mesh("bunny.obj", g_world->m_shader, glm::vec3(0));
     g_bunny_2 = new Mesh("bunny.obj", g_world->m_shader, glm::vec3(0));
+#endif
 
     if (numIterations == 0) {
         g_smoothed_mesh = g_bunny_1;
