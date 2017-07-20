@@ -31,20 +31,6 @@ LIST(APPEND CMAKE_PREFIX_PATH "${MAINFOLDER}")
 INCLUDE_DIRECTORIES("${MAINFOLDER}/include")
 
 #
-# Set compiler warnings
-#
-if(WIN32)
-
-else()
-    if(APPLE)
-        SET(CMAKE_CXX_FLAGS "-g -O0 -Wall -Wextra -Werror -Wfloat-equal -Wno-unused-parameter -Wno-unknown-pragmas -Wno-deprecated-declarations") 
-    elseif(UNIX)
-        SET(CMAKE_CXX_FLAGS "-g -O0 -Wall -Wextra -Werror -Wfloat-equal -Wno-unused-parameter -Wno-unknown-pragmas -Wno-deprecated-declarations -Wno-pessimizing-move")
-        # add_definitions(-DGLEW_EGL)
-    endif()
-endif()
-
-#
 # glfw
 #
 #OPTION(GLFW_BUILD_EXAMPLES  "Build the GLFW example programs"   OFF)
