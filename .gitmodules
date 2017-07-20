@@ -10,3 +10,9 @@
 	path = lib/glew
 	url = https://github.com/PerlMint/glew-cmake.git
 	ignore = dirty
+[submodule "lib/eigen"]
+	path = lib/eigen
+	url = https://github.com/RLovelett/eigen.git
+[submodule "lib/pngzlib"]
+	path = lib/pngzlib
+	url = https://github.com/awstanley/deps-zlib-libpng.git

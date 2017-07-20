@@ -2,8 +2,8 @@
 # Project Properties
 #
 CMAKE_MINIMUM_REQUIRED(VERSION 2.8.12)
-PROJECT(hw3)
-SET(APPLICATION_NAME “hw3”)
+PROJECT(hw4)
+SET(APPLICATION_NAME "hw4")
 SET(APPLICATION_CODENAME "${PROJECT_NAME}")
 SET(APPLICATION_COPYRIGHT_YEARS "2017")
 SET(APPLICATION_VERSION_MAJOR 4)
@@ -40,36 +40,42 @@ else()
         SET(CMAKE_CXX_FLAGS "-g -O0 -Wall -Wextra -Werror -Wfloat-equal -Wno-unused-parameter -Wno-unknown-pragmas -Wno-deprecated-declarations") 
     elseif(UNIX)
         SET(CMAKE_CXX_FLAGS "-g -O0 -Wall -Wextra -Werror -Wfloat-equal -Wno-unused-parameter -Wno-unknown-pragmas -Wno-deprecated-declarations -Wno-pessimizing-move")
-        add_definitions(-DGLEW_EGL)
+        # add_definitions(-DGLEW_EGL)
     endif()
 endif()
 
 #
 # glfw
 #
-OPTION(GLFW_BUILD_EXAMPLES  "Build the GLFW example programs"   OFF)
-OPTION(GLFW_BUILD_TESTS     "Build the GLFW test programs"      OFF)
-OPTION(GLFW_BUILD_DOCS      "Build the GLFW documentation"      OFF)
-OPTION(GLFW_INSTALL         "Generate installation target"      OFF)
+#OPTION(GLFW_BUILD_EXAMPLES  "Build the GLFW example programs"   OFF)
+#OPTION(GLFW_BUILD_TESTS     "Build the GLFW test programs"      OFF)
+#OPTION(GLFW_BUILD_DOCS      "Build the GLFW documentation"      OFF)
+#OPTION(GLFW_INSTALL         "Generate installation target"      OFF)
 
-ADD_SUBDIRECTORY(lib/glfw)
+#ADD_SUBDIRECTORY(lib/glfw)
 
-SET(GLFW_INCLUDE_PATH "${MAINFOLDER}/lib/glfw/include")
+#SET(GLFW_INCLUDE_PATH "${MAINFOLDER}/lib/glfw/include")
 
 #
 # glew
 #
-OPTION(glew-cmake_BUILD_SHARED "Build the shared glew library" OFF)
-ADD_SUBDIRECTORY(lib/glew)
+#OPTION(glew-cmake_BUILD_SHARED "Build the shared glew library" OFF)
+#ADD_SUBDIRECTORY(lib/glew)
 
-SET(GLEW_INCLUDE_PATH "${MAINFOLDER}/lib/glew/include")
+#SET(GLEW_INCLUDE_PATH "${MAINFOLDER}/lib/glew/include")
 
 #
 # glm
 #
-SET(GLM_INCLUDE_PATH "${MAINFOLDER}/lib/glm")
+#SET(GLM_INCLUDE_PATH "${MAINFOLDER}/lib/glm")
+
+#
+# zlib + libpng
+#
+
+ADD_SUBDIRECTORY(lib/pngzlib)
 
 #
 # Add project sources
 #
-ADD_SUBDIRECTORY(hws/hw3)
+ADD_SUBDIRECTORY(hws/hw4)
